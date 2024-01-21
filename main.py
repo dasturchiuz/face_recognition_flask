@@ -28,12 +28,9 @@ def faceCompare():
 
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         fm = cv2.Laplacian(gray, cv2.CV_64F).var()
-        print(fm)
 
         if fm < 100: 
-            print('shart ishladi')
             return jsonify({'error': 'Yuz sifati bilan muommo yuzaga keldi, iltimos kameraga yuzingizni qarating!'})
-        print("Nega bu qator ishladi")
 
 
         # Load face images
